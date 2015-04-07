@@ -11,22 +11,69 @@
     }
 
     ul.carousel li {
+      list-style-type: none;
       height: 100%;
       width: 50px;
       background-image: url("http://s3.amazonaws.com/rapgenius/smang-it-yung-humma.jpg");
+   //   display: inline-block;
+      float: left;
+      border: 1px solid #000;
+      -webkit-transition: width 1s;
+    }
+
+    ul.carousel li:nth-child(2n){
+      background-image: none;
+      background-color: pink;
+    }
+
+    ul.carousel li:hover{
+      width: 250px;
+      -webkit-transition: width 1s;
     }
 
     #panebox {
       position: relative;
       width: 800px;
       height: 600px;
+      background-color: rgba(0,0,0,0.9);
+      //padding: -1px;
     }
 
     #panebox .pane {
       width: 400px;
       height: 300px;
-      background-image: url("http://img.tedcdn.com/r/images.ted.com/images/ted/2534551796ee0a2638b462ce82e33b65091b1d42_1600x1200.jpg?ll=1&quality=89&w=800");
+      background-image:url("http://img.tedcdn.com/r/images.ted.com/images/ted/2534551796ee0a2638b462ce82e33b65091b1d42_1600x1200.jpg?ll=1&quality=89&w=800");
     }
+
+    #pane1, #pane2, #pane3, #pane4{
+      position: absolute;
+    }
+
+    #panebox .pane:hover{
+      opacity: 0.5;
+    }
+
+    #pane2{
+      left: 400px;
+      border-left: 2px solid #FFF;
+      background-position: -400px 0;
+    }
+
+    #pane3{
+      top: 300px;
+      border-top: 2px solid #FFF;
+      background-position: 0 -300px;
+    }
+
+    #pane4{
+      left: 400px;
+      top: 300px;
+      border-top: 2px solid #FFF;
+      border-left: 2px solid #FFF;
+      background-position: -400px -300px;
+    }
+
+
 
   </style>
 </head>
@@ -37,11 +84,11 @@
       <h3>Problem 1</h3>
       <p>Complete the CSS to get the effect from the solution. Note that you do not need to modify the HTML. The list element being hovered over has a width of 300px. The color of the box without Yung Humma is pink. (Hint: think about the nth-child selector.)</p>
       <ul class="carousel">
-        <li>hi there.</li>
-        <li>hi there.</li>
-        <li>hi there.</li>
-        <li>hi there.</li>
-        <li>hi there.</li>
+        <li>hi there.</li><!--
+     --><li>hi there.</li><!--
+     --><li>hi there.</li><!--
+     --><li>hi there.</li><!--
+     --><li>hi there.</li>
       </ul>
     </div>
     <div class="problem">
